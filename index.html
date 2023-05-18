@@ -5,24 +5,27 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <ul id="bookshelf">
-        <li class="book" onclick="openBook('about')">
-            <img src="book_cover1.jpg" alt="Book Cover 1">
-        </li>
-        <li class="book" onclick="openBook('work')">
-            <img src="book_cover2.jpg" alt="Book Cover 2">
-        </li>
-        <!-- add more books here -->
-    </ul>
-
-    <section id="about" class="content hidden">
-        My name is Michael!
-        <!-- Your about me content goes here -->
-    </section>
-    <section id="work" class="content hidden">
-        I should work more...
-        <!-- Your about me content goes here -->
-    </section>
-    <!-- add more sections here -->
+    <header>
+        <h1>Welcome to Michael's Digital Library!</h1>
+    </header>
+    <main>
+        <div id="bookshelf">
+            <div class="book" id="about-me" onclick="openBook('about-me')">
+                <img src="book_cover.jpg" alt="About Me Book Cover">
+                <p>About Me</p>
+            </div>
+            <!-- add more books here -->
+        </div>
+        <div id="book-contents">
+            <section id="about-me-content" class="book-content hidden">
+                <h2>About Me</h2>
+                <p>Hi! My name is Michael and I am an aspiring techie!</p>
+            </section>
+            <!-- add more sections here -->
+        </div>
+    </main>
+    <footer>
+        <p>Designed with 💖 by Michael</p>
+    </footer>
 </body>
 </html>

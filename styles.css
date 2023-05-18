@@ -1,21 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fafafa;
+    padding: 20px 0;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+}
+
 #bookshelf {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 20px;
 }
 
 .book {
-    display: inline-block;
-    cursor: pointer;
+    background: #f4f4f4;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
     transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.book img {
+    width: 100%;
+}
+
+.book p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
 }
 
 .book:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
 }
 
-.content {
+.book:active {
+    animation: pull-book 0.5s forwards;
+}
+
+#book-contents {
+    width: 90%;
+}
+
+.book-content {
     display: none;
+    text-align: left;
 }
 
 .hidden {
     display: none;
+}
+
+footer {
+    background: #333;
+    color: #fafafa;
+    padding: 10px 0;
+    width: 100%;
 }
