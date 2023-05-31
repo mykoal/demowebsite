@@ -33,44 +33,40 @@
             100% {opacity: 1;}
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="typewriter">
-            <h1>Welcome to my portfolio!</h1>
-        </div>
-    </div>
-
     <nav class="navbar">
         <div class="logo">
             <img src="signature.png" alt="Your Signature"> <!-- Replace with your image -->
         </div>
         <ul class="nav-links">
             <li><a href="#work">Work</a></li>
-            <li><a href="#me">About</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
         </ul>
     </nav>
+
+    <div class="header">
+        <div class="typewriter">
+            <h1>Welcome to my portfolio!</h1>
+        </div>
+    </div>
 
     <div class="section" id="work">
         <div class="content">
             <h1 class="animated-header">Work</h1>
-            <p>Fascinating details about your work experience.</p>
+            <p>Click on an image to learn more about each project.</p>
         </div>
         <div class="image-container">
-            <img src="work_image.png" alt="Work Image"> <!-- Replace with your image -->
-            <p>Text related to the image.</p>
+            <a href="project1.html"><img src="work_image1.png" alt="Work Image 1"></a> <!-- Replace with your image -->
+            <p>Text related to the first image.</p>
         </div>
-    </div>
-
-    <div class="section" id="me">
-        <h1 class="animated-header">About Me</h1>
-        <p>Engaging details about yourself, your interests, and your journey into product management.</p>
-    </div>
-
-    <div class="section" id="resume">
-        <h1 class="animated-header">Resume</h1>
-        <p>Summary of your qualifications and experiences. Include a link to download your full resume.</p>
+        <div class="image-container">
+            <a href="project2.html"><img src="work_image2.png" alt="Work Image 2"></a> <!-- Replace with your image -->
+            <p>Text related to the second image.</p>
+        </div>
+        <!-- Add more projects as needed -->
     </div>
 
     <div class="footer">
@@ -79,8 +75,6 @@
         <a href="mailto:your.email@example.com" class="footer-link"><i class="fas fa-envelope"></i></a>
         <p>Copyright &copy; 2023 Your Name</p>
     </div>
-
-    <button onclick="topFunction()" id="scrollBtn" title="Go to top">Top</button>
 
     <script src="script.js"></script>
     <script>
@@ -94,5 +88,6 @@
             });
         });
     </script>
+    <script src="transitions.js"></script>
 </body>
 </html>
