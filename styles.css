@@ -1,90 +1,43 @@
 body {
     font-family: Arial, sans-serif;
-    background: #fafafa;
-    color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
+}
+
+.header, .footer {
+    background-color: #f8f9fa;
+    padding: 20px;
     text-align: center;
 }
 
-header {
-    background: #333;
-    color: #fafafa;
-    padding: 20px 0;
-    width: 100%;
-    text-transform: uppercase;
+.section {
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex: 1;
-    padding: 20px;
-    width: 100%;
-}
-
-#bookshelf {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background: #ddd;
-    border-radius: 10px;
-    width: 90%;
+.section h1 {
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
-.book {
-    background: #f4f4f4;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
-    cursor: pointer;
-    position: relative;
+.section p {
+    margin-bottom: 20px;
 }
 
-.book img {
-    width: 100%;
-}
-
-.book p {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-.book:hover {
-    transform: scale(1.1);
-}
-
-.book:active {
-    animation: pull-book 0.5s forwards;
-}
-
-#book-contents {
-    width: 90%;
-}
-
-.book-content {
-    display: none;
-    text-align: left;
-}
-
-.hidden {
-    display: none;
-}
-
-footer {
-    background: #333;
-    color: #fafafa;
-    padding: 10px 0;
-    width: 100%;
+#scrollBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
 }
