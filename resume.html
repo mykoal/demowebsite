@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Name - Resume</title>
+    <title>Michael - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .animated-header {
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <!-- Navbar goes here -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="signature.png" alt="my signature"> <!-- Replace with your image -->
+        </div>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
 
-    <!-- Your content goes here -->
-    <div class="section" id="resume">
-        <h1 class="animated-header">Resume</h1>
-        <p>Summary of your qualifications and experiences. Include a link to download your full resume.</p>
+    <div class="header">
+        <div class="typewriter">
+            <h1>Welcome to my resume!</h1>
+            <p>This type writer text should speak for itself, I mean look at this thing!</p>
+        </div>
     </div>
 
-    <!-- Footer goes here -->
+    </div>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/msli/" class="footer-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/mykoal" class="footer-link" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:msli@sas.upenn.edu" class="footer-link"><i class="fas fa-envelope"></i></a>
+        <p>Copyright &copy; 2023 Michael</p>
+        <p>last updated: a while ago!</p>
+    </div>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     <script src="transitions.js"></script>
 </body>
 </html>
-
